@@ -17,5 +17,20 @@ namespace BookLists
         {
             InitializeComponent();
         }
+
+        private void MicrosoftBooks_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Microsoft());
+        }
+
+        private void Programming_Clicked(object sender,EventArgs e)
+        {
+        }
+        private void Mobile_Clicked(object sender, EventArgs e)
+        {
+        }
+        private void MachineLearning_Clicked(object sender, EventArgs e)
+        {
+        }
     }
 }
