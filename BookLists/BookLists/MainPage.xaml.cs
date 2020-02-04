@@ -16,6 +16,16 @@ namespace BookLists
         public MainPage()
         {
             InitializeComponent();
+            if (Device.Idiom == TargetIdiom.Phone)
+            {
+                PhoneView.IsVisible = true;
+                TabletView.IsVisible = false;
+            }
+            else
+            {
+                PhoneView.IsVisible = false;
+                TabletView.IsVisible = true;
+            }
         }
 
         private void MicrosoftBooks_Clicked(object sender, EventArgs e)
@@ -23,7 +33,7 @@ namespace BookLists
             Navigation.PushAsync(new Microsoft());
         }
 
-        private void Programming_Clicked(object sender,EventArgs e)
+        private void Programming_Clicked(object sender, EventArgs e)
         {
         }
         private void Mobile_Clicked(object sender, EventArgs e)
